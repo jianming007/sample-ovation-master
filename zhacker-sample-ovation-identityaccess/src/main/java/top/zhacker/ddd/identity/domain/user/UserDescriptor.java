@@ -11,6 +11,7 @@ import top.zhacker.ddd.identity.domain.tenant.TenantId;
 
 
 /**
+ * 用户描述-值对像
  * Created by zhacker.
  * Time 2018/6/30 下午9:15
  */
@@ -24,7 +25,7 @@ public class UserDescriptor extends AssertionConcern {
   private TenantId tenantId;
   private String username;
   private String emailAddress;
-  
+  /** null的用户描述*/
   public static UserDescriptor nullDescriptorInstance() {
     return new UserDescriptor();
   }

@@ -23,6 +23,7 @@ import top.zhacker.ddd.identity.domain.user.UserRepo;
 
 
 /**
+ * 租户提供的服务-领域服务
  * Created by zhacker.
  * Time 2018/6/13 上午11:28
  */
@@ -38,7 +39,7 @@ public class TenantProvisionService {
     this.userRepo = userRepo;
     this.roleRepo = roleRepo;
   }
-  
+  /** 提供租户*/
   public Tenant provisionTenant(
       String aTenantName,
       String aTenantDescription,
@@ -74,7 +75,7 @@ public class TenantProvisionService {
           "Cannot provision tenant because: " + t.getMessage());
     }
   }
-  
+  /** 注册管理员*/
   private void registerAdministratorFor(
       Tenant aTenant,
       FullName anAdministorName,

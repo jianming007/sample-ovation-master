@@ -24,7 +24,7 @@ import top.zhacker.core.model.AssertionConcern;
 public final class Enablement extends AssertionConcern implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    /** 启用*/
     private boolean enabled;
     private Date endDate;
     private Date startDate;

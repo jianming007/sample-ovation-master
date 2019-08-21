@@ -31,6 +31,7 @@ public final class EmailAddress extends AssertionConcern implements Serializable
 
     private static final long serialVersionUID = 1L;
 
+    /** 地址*/
     @Getter
     private String address;
 

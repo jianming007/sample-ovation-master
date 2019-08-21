@@ -10,6 +10,7 @@ import top.zhacker.ddd.identity.domain.user.person.ContactInformation;
 
 
 /**
+ * 人员联系信息已更改事件
  * Created by zhacker.
  * Time 2018/6/30 下午9:59
  */

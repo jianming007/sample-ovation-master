@@ -100,7 +100,7 @@ public class Group extends IdentifiedEntity {
     
     return isMember;
   }
-  
+  /** 添加组*/
   public void addGroup(Group aGroup) {
     
     GroupMemberService groupMemberService = DomainRegistry.service(GroupMemberService.class);
@@ -136,7 +136,7 @@ public class Group extends IdentifiedEntity {
     
     return groupMember;
   }
-  
+  /** 添加用户*/
   public void addUser(User aUser) {
     this.assertArgumentNotNull(aUser, "User must not be null.");
     this.assertArgumentEquals(this.getTenantId(), aUser.getTenantId(), "Wrong tenant for this group.");
@@ -150,7 +150,7 @@ public class Group extends IdentifiedEntity {
               aUser.getUsername()));
     }
   }
-  
+  /** 删除组中的组*/
   public void removeGroup(Group aGroup) {
     this.assertArgumentNotNull(aGroup, "Group must not be null.");
     this.assertArgumentEquals(this.getTenantId(), aGroup.getTenantId(), "Wrong tenant for this group.");
@@ -164,7 +164,7 @@ public class Group extends IdentifiedEntity {
               aGroup.getName()));
     }
   }
-  
+  /** 删除用户*/
   public void removeUser(User aUser) {
     this.assertArgumentNotNull(aUser, "User must not be null.");
     this.assertArgumentEquals(this.getTenantId(), aUser.getTenantId(), "Wrong tenant for this group.");

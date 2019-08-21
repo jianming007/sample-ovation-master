@@ -25,6 +25,7 @@ public class HibernateGroupRepo implements GroupRepo {
   
   @Override
   public void add(Group group) {
+    // ?
     entityManager.persist(group);
   }
   

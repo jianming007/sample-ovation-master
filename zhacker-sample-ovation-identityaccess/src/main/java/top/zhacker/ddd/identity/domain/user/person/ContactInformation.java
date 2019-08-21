@@ -19,15 +19,20 @@ import java.io.Serializable;
 import lombok.Getter;
 import top.zhacker.core.model.AssertionConcern;
 
-
+/**
+ * 联系信息
+ */
 @Getter
 public final class ContactInformation extends AssertionConcern implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    /** 邮箱地址*/
     private EmailAddress emailAddress;
+    /** 邮政地址*/
     private PostalAddress postalAddress;
+    /** 主要电话*/
     private Telephone primaryTelephone;
+    /** 其它电话*/
     private Telephone secondaryTelephone;
 
     public ContactInformation(
@@ -50,7 +55,7 @@ public final class ContactInformation extends AssertionConcern implements Serial
              aContactInformation.primaryTelephone(),
              aContactInformation.secondaryTelephone());
     }
-
+    /** 修改邮件地址*/
     public ContactInformation changeEmailAddress(EmailAddress anEmailAddress) {
         return new ContactInformation(
                 anEmailAddress,
@@ -58,7 +63,7 @@ public final class ContactInformation extends AssertionConcern implements Serial
                 this.primaryTelephone(),
                 this.secondaryTelephone());
     }
-
+    /** 更改邮政地址*/
     public ContactInformation changePostalAddress(PostalAddress aPostalAddress) {
         return new ContactInformation(
                this.emailAddress(),
@@ -66,7 +71,7 @@ public final class ContactInformation extends AssertionConcern implements Serial
                this.primaryTelephone(),
                this.secondaryTelephone());
     }
-
+    /** 修改主要电话*/
     public ContactInformation changePrimaryTelephone(Telephone aTelephone) {
         return new ContactInformation(
                this.emailAddress(),
@@ -74,7 +79,7 @@ public final class ContactInformation extends AssertionConcern implements Serial
                aTelephone,
                this.secondaryTelephone());
     }
-
+    /** 修改次要电话*/
     public ContactInformation changeSecondaryTelephone(Telephone aTelephone) {
         return new ContactInformation(
                this.emailAddress(),

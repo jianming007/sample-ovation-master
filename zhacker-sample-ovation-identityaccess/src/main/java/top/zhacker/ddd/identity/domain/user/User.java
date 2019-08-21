@@ -116,7 +116,7 @@ public class User extends IdentifiedEntity {
   public void changePersonalName(FullName aPersonalName) {
     this.person.changeName(aPersonalName);
   }
-  
+  /** 定义启用*/
   public void defineEnablement(Enablement anEnablement) {
     this.setEnablement(anEnablement);
     

@@ -19,15 +19,22 @@ import java.io.Serializable;
 import lombok.Getter;
 import top.zhacker.core.model.AssertionConcern;
 
+/**
+ * 邮政地址-值对像
+ */
 @Getter
 public class PostalAddress extends AssertionConcern implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    /** 市*/
     private String city;
+    /** 国家代码*/
     private String countryCode;
+    /** 邮政编码*/
     private String postalCode;
+    /** 州省*/
     private String stateProvince;
+    /** 街道地址*/
     private String streetAddress;
 
     public PostalAddress(

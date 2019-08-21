@@ -10,6 +10,7 @@ import top.zhacker.ddd.identity.domain.user.person.FullName;
 
 
 /**
+ * 人名改变事件
  * Created by zhacker.
  * Time 2018/6/30 下午9:58
  */

@@ -24,7 +24,7 @@ import java.util.List;
 
 
 /**
- * 客户api
+ * 客户api-控制层
  * Created by zhacker.
  * Time 2018/6/13 上午10:07
  */
@@ -38,32 +38,33 @@ public class TenantApi {
   @Autowired
   private TenantRepo tenantRepo;
 
-  /** 获取所有租户*/
+  /** 获取所有-租户*/
   @GetMapping("/list")
   public List<Tenant> list(){
+    // 这里通过资源层直接获取
     return tenantRepo.findAll();
   }
-  /** 下一个id*/
+  /** 下一个身份*/
   @GetMapping("/nextId")
   public String nextId(){
     return DomainRegistry.repo(TenantRepo.class).nextIdentity().getId();
   }
-  /** 根据租户id获取租户*/
+  /** 根据租户id获取-租户*/
   @GetMapping("/{tenantId}")
   public Tenant findTenantById(@PathVariable("tenantId") String tenantId){
     return identityApplicationService.tenant(tenantId);
   }
-  /** 规定租户*/
+  /** 规定-租户*/
   @PostMapping("/provision")
   public Tenant provision(@RequestBody ProvisionTenantCommand request){
     return identityApplicationService.provisionTenant(request);
   }
-  /** 激活租户*/
+  /** 激活-租户*/
   @PostMapping("/activate")
   public void activateTenant(@RequestBody ActivateTenantCommand aCommand){
     identityApplicationService.activateTenant(aCommand);
   }
-  /** 停用租户*/
+  /** 停用-租户*/
   @PostMapping("deactivate")
   public void deactivateTenant(@RequestBody DeactivateTenantCommand aCommand){
     identityApplicationService.deactivateTenant(aCommand);

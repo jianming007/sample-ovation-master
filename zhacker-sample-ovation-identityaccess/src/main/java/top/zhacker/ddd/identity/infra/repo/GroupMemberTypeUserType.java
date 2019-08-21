@@ -16,8 +16,11 @@ package top.zhacker.ddd.identity.infra.repo;
 
 import top.zhacker.ddd.identity.domain.group.GroupMemberType;
 
-
+/**
+ * 组成员类型用户类型
+ */
 public class GroupMemberTypeUserType extends EnumUserType<GroupMemberType> {
+    /** 组成员类型用户类型*/
     public GroupMemberTypeUserType() {
         super(GroupMemberType.class);
     }

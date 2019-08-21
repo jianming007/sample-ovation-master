@@ -25,7 +25,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
-
+/**
+ * 枚举用户类型
+ */
 public class EnumUserType<E extends Enum<E>> implements UserType {
 
     private static final int[] SQL_TYPES = { Types.VARCHAR };
@@ -68,23 +70,23 @@ public class EnumUserType<E extends Enum<E>> implements UserType {
 //            preparedStatement.setString(index, ((Enum<?>)value).name());
 //        }
 //    }
-
+    /** 深拷贝*/
     public Object deepCopy(Object value) throws HibernateException{
         return value;
     }
-
+    /** 是可变的*/
     public boolean isMutable() {
         return false;
     }
-
+    /** 组装*/
     public Object assemble(Serializable cached, Object owner) throws HibernateException {
          return cached;
     }
-
+    /** 拆卸*/
     public Serializable disassemble(Object value) throws HibernateException {
         return (Serializable)value;
     }
-
+    /**更换*/
     public Object replace(Object original, Object target, Object owner) throws HibernateException {
         return original;
     }

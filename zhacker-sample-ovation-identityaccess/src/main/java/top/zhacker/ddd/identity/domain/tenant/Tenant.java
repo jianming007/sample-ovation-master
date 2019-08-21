@@ -120,17 +120,22 @@ public class Tenant extends IdentifiedEntity {
     
     return Collections.unmodifiableSet(allInvitations);
   }
-  
+  /** 是通过注册*/
   public boolean isRegistrationAvailableThrough(String anInvitationIdentifier) {
-  
+    // 判断租户激活状态
     this.assertStateTrue(this.isActive(), "Tenant is not active.");
-  
+
     RegistrationInvitation invitation =
         this.invitation(anInvitationIdentifier);
   
     return invitation == null ? false : invitation.isAvailable();
   }
-  
+
+  /**
+   * 邀请
+   * @param anInvitationIdentifier 邀请标识符
+   * @return 注册邀请
+   */
   protected RegistrationInvitation invitation(String anInvitationIdentifier) {
     for (RegistrationInvitation invitation : this.getRegistrationInvitations()) {
       if (invitation.isIdentifiedBy(anInvitationIdentifier)) {
@@ -142,7 +147,7 @@ public class Tenant extends IdentifiedEntity {
   
   
   
-  /*********** command **************/
+  /*********** command - 激活 **************/
   
   public void activate(){
     
@@ -153,7 +158,7 @@ public class Tenant extends IdentifiedEntity {
       );
     }
   }
-  
+  /** 停用租户*/
   public void deactivate(){
     
     if(this.isActive()){
@@ -163,7 +168,7 @@ public class Tenant extends IdentifiedEntity {
       );
     }
   }
-  
+  /** 提供注册邀请*/
   public RegistrationInvitation offerRegistrationInvitation(String aDescription) {
     this.assertStateTrue(this.isActive(), "Tenant is not active.");
   
@@ -183,7 +188,7 @@ public class Tenant extends IdentifiedEntity {
   
     return invitation;
   }
-  
+  /** 撤回邀请*/
   public void withdrawInvitation(String anInvitationIdentifier) {
     RegistrationInvitation invitation =
         this.invitation(anInvitationIdentifier);
@@ -196,7 +201,7 @@ public class Tenant extends IdentifiedEntity {
   public RegistrationInvitation redefineRegistrationInvitationAs(String anInvitationIdentifier) {
     return null;
   }
-  
+  /** 提供组*/
   public Group provisionGroup(String aName, String aDescription) {
     this.assertStateTrue(this.isActive(), "Tenant is not active.");
   
@@ -217,7 +222,7 @@ public class Tenant extends IdentifiedEntity {
   
     return role;
   }
-  
+  /** 注册用户*/
   public User registerUser(
       String anInvitationIdentifier,
       String aUsername,

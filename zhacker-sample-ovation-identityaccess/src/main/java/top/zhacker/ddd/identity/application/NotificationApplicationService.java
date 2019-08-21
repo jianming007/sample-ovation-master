@@ -23,7 +23,9 @@ import top.zhacker.boot.event.notification.NotificationLogFactory;
 import top.zhacker.boot.event.notification.NotificationLogId;
 import top.zhacker.boot.event.store.EventStore;
 
-
+/**
+ * 通知申请服务
+ */
 @Service
 public class NotificationApplicationService {
 

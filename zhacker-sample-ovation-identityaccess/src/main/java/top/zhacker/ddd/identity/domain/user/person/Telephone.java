@@ -21,6 +21,9 @@ import java.util.regex.Pattern;
 import lombok.Getter;
 import top.zhacker.core.model.AssertionConcern;
 
+/**
+ * 电话-值对像
+ */
 @Getter
 public final class Telephone extends AssertionConcern implements Serializable {
 

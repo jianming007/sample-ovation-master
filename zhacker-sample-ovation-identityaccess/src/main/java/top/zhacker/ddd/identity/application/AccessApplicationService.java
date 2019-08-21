@@ -23,6 +23,7 @@ import top.zhacker.ddd.identity.domain.user.UserRepo;
 
 
 /**
+ * 访问应用服务
  * Created by zhacker.
  * Time 2018/6/30 下午10:43
  */

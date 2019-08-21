@@ -95,7 +95,7 @@ public class Role extends IdentifiedEntity {
         "Role backing group for: " + this.name));
   }
   
-  
+  /** 分配组*/
   public void assignGroup(Group group){
     this.assertStateTrue(this.supportsNesting, "This role does not support group nesting.");
     this.assertArgumentNotNull(group, "Group must not be null.");
@@ -109,7 +109,7 @@ public class Role extends IdentifiedEntity {
             this.name,
             group.getName()));
   }
-  
+  /** 分配用户*/
   public void assignUser(User aUser){
     this.assertArgumentNotNull(aUser, "User must not be null.");
     this.assertArgumentEquals(this.getTenantId(), aUser.getTenantId(), "Wrong tenant for this user.");
@@ -128,7 +128,7 @@ public class Role extends IdentifiedEntity {
             aUser.getPerson().name().lastName(),
             aUser.getPerson().emailAddress().getAddress()));
   }
-  
+  /** 取消组*/
   public void unassignGroup(Group aGroup){
     this.assertStateTrue(this.supportsNesting, "This role does not support group nesting.");
     this.assertArgumentNotNull(aGroup, "Group must not be null.");
@@ -142,7 +142,7 @@ public class Role extends IdentifiedEntity {
             this.getName(),
             aGroup.getName()));
   }
-  
+  /** 取消用户*/
   public void unassignUser(User aUser){
     this.assertArgumentNotNull(aUser, "User must not be null.");
     this.assertArgumentEquals(this.getTenantId(), aUser.getTenantId(), "Wrong tenant for this user.");

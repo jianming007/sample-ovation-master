@@ -16,7 +16,7 @@ public interface UserRepo {
 
   /** 根据租户id和用户名称获取用户*/
   User userWithUsername(TenantId tenantId, String username);
-  
+  /** 用户来自真实认证*/
   User userFromAuthenticCredentials(
           TenantId aTenantId,
           String aUsername,

@@ -14,6 +14,9 @@
 
 package top.zhacker.ddd.identity.application.command;
 
+/**
+ * 激活租户命令
+ */
 public class ActivateTenantCommand {
     private String tenantId;
 

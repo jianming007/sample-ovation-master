@@ -8,6 +8,7 @@ import top.zhacker.ddd.identity.domain.tenant.TenantId;
 
 
 /**
+ * 注册邀请
  * Created by zhacker.
  * Time 2018/6/13 上午10:46
  */
@@ -66,7 +67,7 @@ public class RegistrationInvitation extends IdentifiedEntity {
     this.setUntil(null);
     return this;
   }
-  
+  /** 识别邀请标识符*/
   public boolean isIdentifiedBy(String anInvitationIdentifier) {
     boolean isIdentified = this.getInvitationId().equals(anInvitationIdentifier);
     if (!isIdentified && this.getDescription() != null) {

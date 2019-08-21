@@ -47,10 +47,11 @@ public class Person extends IdentifiedEntity {
         this.setName(aName);
         this.setTenantId(aTenantId);
     }
-
+    /** 更改用户联系信息*/
     public void changeContactInformation(ContactInformation aContactInformation) {
         this.setContactInformation(aContactInformation);
 
+        // 发布人员信息已更改事件
         DomainEventPublisher
             .publish(new PersonContactInformationChanged(
                     this.tenantId(),
@@ -60,7 +61,7 @@ public class Person extends IdentifiedEntity {
 
     public void changeName(FullName aName) {
         this.setName(aName);
-
+        // 发布人名改变事件
         DomainEventPublisher
             .publish(new PersonNameChanged(
                     this.tenantId(),
