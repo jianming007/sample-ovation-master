@@ -26,6 +26,9 @@ import top.zhacker.ddd.agilepm.domain.tenant.TenantId;
 
 import java.util.*;
 
+/**
+ * 实体
+ */
 @Getter
 public class Task extends IdentifiedEntity {
 

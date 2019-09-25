@@ -27,6 +27,9 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 聚合根
+ */
 @Getter
 public class Sprint extends IdentifiedEntity {
 

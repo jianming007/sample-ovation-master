@@ -8,7 +8,7 @@ import top.zhacker.ddd.identity.domain.tenant.TenantId;
 
 
 /**
- * 注册邀请
+ * 注册邀请-实体
  * Created by zhacker.
  * Time 2018/6/13 上午10:46
  */

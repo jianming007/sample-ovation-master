@@ -22,7 +22,9 @@ import top.zhacker.ddd.agilepm.domain.tenant.TenantId;
 
 import java.util.Date;
 
-
+/**
+ * 领域事件
+ */
 public class TaskStatusChanged implements DomainEvent {
 
     private BacklogItemId backlogItemId;

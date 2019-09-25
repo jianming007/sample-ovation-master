@@ -23,6 +23,9 @@ import top.zhacker.ddd.identity.domain.user.User;
 import top.zhacker.ddd.identity.domain.user.person.event.PersonContactInformationChanged;
 import top.zhacker.ddd.identity.domain.user.person.event.PersonNameChanged;
 
+/**
+ * 实体
+ */
 public class Person extends IdentifiedEntity {
 
     private static final long serialVersionUID = 1L;

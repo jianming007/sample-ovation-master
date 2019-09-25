@@ -27,7 +27,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
+/**
+ * 聚合根
+ */
 public class CalendarEntry extends EventSourcedRootEntity {
 
     private Alarm alarm;

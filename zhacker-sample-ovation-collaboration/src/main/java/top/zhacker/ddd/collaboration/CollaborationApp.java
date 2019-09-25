@@ -8,6 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 
 /**
+ * 协作应用程序
  * Created by zhacker.
  * Time 2018/6/13 上午9:59
  */

@@ -18,7 +18,9 @@ package top.zhacker.ddd.agilepm.domain.tenant;
 import lombok.Getter;
 import top.zhacker.core.model.AssertionConcern;
 
-
+/***
+ * 租户
+ */
 public class TenantId extends AssertionConcern {
 
     @Getter

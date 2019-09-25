@@ -33,7 +33,7 @@ import top.zhacker.ddd.identity.domain.user.User;
 
 
 /**
- * 租户对象-实体
+ * 租户对象-聚合根
  * Created by zhacker.
  * Time 2018/6/11 下午7:03
  */

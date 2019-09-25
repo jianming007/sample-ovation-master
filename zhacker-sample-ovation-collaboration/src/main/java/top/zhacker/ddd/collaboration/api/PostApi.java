@@ -29,17 +29,18 @@ public class PostApi {
   
   @Autowired
   private PostQueryService postQueryService;
-  
+
+  /** 所有后期讨论数据*/
   @GetMapping("/all")
   public Collection<PostData> allPostsDataOfDiscussion(String aTenantId, String aDiscussionId){
     return postQueryService.allPostsDataOfDiscussion(aTenantId, aDiscussionId);
   }
-  
+  /** 发布数据id*/
   @GetMapping("/detail")
   public PostData postDataOfId(String aTenantId, String aPostId) {
     return postQueryService.postDataOfId(aTenantId,aPostId);
   }
-  
+  /** 创建*/
   @PostMapping("/create")
   public void create(@RequestBody PostCreateCommand command){
     
@@ -62,7 +63,7 @@ public class PostApi {
     
     discussionApplicationService.postToDiscussion(command, result);
   }
-  
+  /** 中等帖子*/
   @PostMapping("/modify")
   public void moderatePost(@RequestBody PostModerateCommand command) {
     postApplicationService.moderatePost(command);

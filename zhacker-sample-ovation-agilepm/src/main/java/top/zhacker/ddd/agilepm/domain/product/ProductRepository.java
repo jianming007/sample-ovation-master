@@ -18,7 +18,9 @@ import top.zhacker.ddd.agilepm.domain.tenant.TenantId;
 
 import java.util.Collection;
 
-
+/**
+ * 产品资源库
+ */
 public interface ProductRepository {
 
     public Collection<Product> allProductsOfTenant(TenantId aTenantId);

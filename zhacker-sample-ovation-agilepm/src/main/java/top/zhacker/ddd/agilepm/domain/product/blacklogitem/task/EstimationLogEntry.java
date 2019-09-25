@@ -20,6 +20,9 @@ import top.zhacker.ddd.agilepm.domain.tenant.TenantId;
 
 import java.util.Date;
 
+/**
+ * 值对像
+ */
 @Getter
 public class EstimationLogEntry extends IdentifiedEntity {
 

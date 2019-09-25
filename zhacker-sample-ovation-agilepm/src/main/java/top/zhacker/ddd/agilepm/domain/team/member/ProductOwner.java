@@ -8,6 +8,7 @@ import java.util.Date;
 
 
 /**
+ * 聚合根
  * Created by zhacker.
  * Time 2018/6/18 下午10:16
  */

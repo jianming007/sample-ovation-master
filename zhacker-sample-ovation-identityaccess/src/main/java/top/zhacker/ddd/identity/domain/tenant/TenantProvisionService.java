@@ -65,7 +65,7 @@ public class TenantProvisionService {
           aPrimaryTelephone,
           aSecondaryTelephone
       );
-  
+      // 发布租户提供事件
       DomainEventPublisher.publish(new TenantProvisioned(tenant.getTenantId()));
 
       return tenant;

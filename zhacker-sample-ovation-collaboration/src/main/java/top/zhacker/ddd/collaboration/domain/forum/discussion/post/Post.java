@@ -15,6 +15,7 @@ import java.util.List;
 
 
 /**
+ * 聚合根
  * Created by zhacker.
  * Time 2018/7/14 上午8:19
  */

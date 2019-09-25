@@ -20,7 +20,7 @@ import lombok.Getter;
 import top.zhacker.core.model.AssertionConcern;
 
 /**
- * 联系信息
+ * 联系信息-值对像
  */
 @Getter
 public final class ContactInformation extends AssertionConcern implements Serializable {

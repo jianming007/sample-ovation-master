@@ -14,6 +14,9 @@
 
 package top.zhacker.ddd.identity.application.command;
 
+/**
+ * 添加组到组命令
+ */
 public class AddGroupToGroupCommand {
 
     private String tenantId;

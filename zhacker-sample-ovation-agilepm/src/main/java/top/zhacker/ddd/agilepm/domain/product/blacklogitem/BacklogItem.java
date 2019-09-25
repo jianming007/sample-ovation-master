@@ -38,6 +38,9 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 聚合根
+ */
 @Getter
 public class BacklogItem extends IdentifiedEntity {
 

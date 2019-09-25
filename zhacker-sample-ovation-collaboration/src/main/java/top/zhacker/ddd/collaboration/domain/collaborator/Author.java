@@ -13,7 +13,9 @@
 //   limitations under the License.
 
 package top.zhacker.ddd.collaboration.domain.collaborator;
-
+/**
+ *  作者-值对像
+ */
 public final class Author extends Collaborator {
 
     private static final long serialVersionUID = 1L;

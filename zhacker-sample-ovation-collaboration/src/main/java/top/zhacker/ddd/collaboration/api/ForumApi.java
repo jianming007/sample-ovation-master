@@ -16,6 +16,7 @@ import java.util.Collection;
 
 
 /**
+ * 论坛api
  * Created by zhacker.
  * Time 2018/7/8 上午11:12
  */
@@ -29,7 +30,7 @@ public class ForumApi {
   
   @Autowired
   private ForumQueryService forumQueryService;
-  
+  /** 开始*/
   @PostMapping("/start")
   public void start(@RequestBody ForumStartCommand command){
     
@@ -46,42 +47,42 @@ public class ForumApi {
   
     forumApplicationService.startForum(command, result);
   }
-  
+  /** 关闭*/
   @PostMapping("/close")
   public void closeForum(
       String tenantId,
       String forumId) {
     forumApplicationService.closeForum(tenantId, forumId);
   }
-  
+  /** 重开*/
   @PostMapping("/reopen")
   public void  reopenForum(
       String tenantId,
       String forumId){
     forumApplicationService.reopenForum(tenantId,forumId);
   }
-  
+  /** 所有论坛租户数据*/
   @GetMapping("/all")
   public Collection<ForumData> allForumsDataOfTenant(String aTenantId){
     return forumQueryService.allForumsDataOfTenant(aTenantId);
   }
-  
+  /** 详情*/
   @GetMapping("/detail")
   public ForumData forumDataOfId(String aTenantId, String aForumId){
     return forumQueryService.forumDataOfId(aTenantId, aForumId);
   }
-  
+  /** 指派主持人论坛*/
   @PostMapping("/assign-moderator")
   public void assignModeratorToForum(@RequestBody ForumAssignModeratorCommand command) {
     forumApplicationService.assignModeratorToForum(command);
   }
   
-  
+  /** 改变论坛描述*/
   @PostMapping("change-description")
   public void changeForumDescription(@RequestBody ForumChangeDescriptionCommand command) {
     forumApplicationService.changeForumDescription(command);
   }
-  
+  /** 改变论坛主体*/
   @PostMapping("change-subject")
   public void changeForumSubject(@RequestBody ForumChangeSubjectCommand command) {
     forumApplicationService.changeForumSubject(command);

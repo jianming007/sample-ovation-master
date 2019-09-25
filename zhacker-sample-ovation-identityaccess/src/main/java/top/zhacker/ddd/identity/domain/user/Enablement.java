@@ -20,6 +20,9 @@ import java.util.Date;
 import lombok.Getter;
 import top.zhacker.core.model.AssertionConcern;
 
+/**
+ * 值对像
+ */
 @Getter
 public final class Enablement extends AssertionConcern implements Serializable {
 

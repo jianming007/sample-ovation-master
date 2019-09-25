@@ -19,7 +19,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+/**
+ * 租户
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

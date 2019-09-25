@@ -17,7 +17,7 @@ import top.zhacker.ddd.identity.domain.tenant.TenantId;
 
 
 /**
- * 用户对象-实体
+ * 用户对象-聚合根
  * Created by zhacker.
  * Time 2018/6/13 上午11:08
  */

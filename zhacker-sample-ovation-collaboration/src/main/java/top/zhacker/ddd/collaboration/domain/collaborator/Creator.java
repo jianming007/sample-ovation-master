@@ -14,6 +14,9 @@
 
 package top.zhacker.ddd.collaboration.domain.collaborator;
 
+/**
+ * 值对像
+ */
 public final class Creator extends Collaborator {
 
     private static final long serialVersionUID = 1L;

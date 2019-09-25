@@ -31,7 +31,9 @@ import java.util.List;
 //import top.zhacker.core.model.EventSourcedRootEntity;
 //import top.zhacker.boot.registry.DomainRegistry;
 
-
+/**
+ * 论坛-聚合根
+ */
 public class Forum extends EventSourcedRootEntity {
 
     private boolean closed;

@@ -7,6 +7,7 @@ import top.zhacker.core.model.AssertionConcern;
 
 
 /**
+ * 产品id
  * Created by zhacker.
  * Time 2018/6/20 下午9:24
  */

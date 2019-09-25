@@ -16,7 +16,9 @@ package top.zhacker.ddd.collaboration.domain.collaborator;
 
 import java.io.Serializable;
 
-
+/**
+ * 合作者
+ */
 public abstract class Collaborator
         implements Comparable<Collaborator>, Serializable {
 

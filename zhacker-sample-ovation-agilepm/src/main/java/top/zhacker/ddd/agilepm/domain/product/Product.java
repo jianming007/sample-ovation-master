@@ -41,6 +41,9 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 产品-聚合根
+ */
 @Getter
 public class Product extends IdentifiedEntity {
 

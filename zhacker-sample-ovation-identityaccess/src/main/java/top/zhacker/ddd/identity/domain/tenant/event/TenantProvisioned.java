@@ -8,6 +8,7 @@ import top.zhacker.ddd.identity.domain.tenant.TenantId;
 
 
 /**
+ * 租户提供事件
  * Created by zhacker.
  * Time 2018/6/12 下午1:38
  */

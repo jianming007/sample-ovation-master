@@ -17,7 +17,9 @@ package top.zhacker.ddd.agilepm.domain.product.blacklogitem;
 
 import top.zhacker.core.model.ValueObject;
 
-
+/**
+ * 值对像
+ */
 public class BusinessPriority extends ValueObject {
 
     private BusinessPriorityRatings ratings;

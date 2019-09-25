@@ -15,6 +15,7 @@ import java.util.Set;
 
 
 /**
+ * 团队-聚合根
  * Created by zhacker.
  * Time 2018/6/18 下午10:13
  */
